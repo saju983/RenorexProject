@@ -79,6 +79,22 @@ namespace MyTest1
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.FEATURES' at 55;27.", repo.ApplicationUnderTest.FEATURESInfo, new RecordItemIndex(0));
+            repo.ApplicationUnderTest.FEATURES.Click("55;27");
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.SOLUTIONS' at 32;26.", repo.ApplicationUnderTest.SOLUTIONSInfo, new RecordItemIndex(1));
+            repo.ApplicationUnderTest.SOLUTIONS.Click("32;26");
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.PRICING' at 59;16.", repo.ApplicationUnderTest.PRICINGInfo, new RecordItemIndex(2));
+            repo.ApplicationUnderTest.PRICING.Click("59;16");
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.RESOURCES' at 51;26.", repo.ApplicationUnderTest.RESOURCESInfo, new RecordItemIndex(3));
+            repo.ApplicationUnderTest.RESOURCES.Click("51;26");
+            Delay.Milliseconds(200);
+            
         }
 
 #region Image Feature Data

@@ -85,6 +85,10 @@ namespace MyTest1
         [RepositoryFolder("8aefcf23-5d42-4100-abda-e414f868c905")]
         public partial class ApplicationUnderTestAppFolder : RepoGenBaseFolder
         {
+            RepoItemInfo _featuresInfo;
+            RepoItemInfo _solutionsInfo;
+            RepoItemInfo _pricingInfo;
+            RepoItemInfo _resourcesInfo;
 
             /// <summary>
             /// Creates a new ApplicationUnderTest  folder.
@@ -92,6 +96,10 @@ namespace MyTest1
             public ApplicationUnderTestAppFolder(RepoGenBaseFolder parentFolder) :
                     base("ApplicationUnderTest", "/dom[@domain='www.ranorex.com']", parentFolder, 30000, null, false, "8aefcf23-5d42-4100-abda-e414f868c905", "")
             {
+                _featuresInfo = new RepoItemInfo(this, "FEATURES", ".//li[#'productMenuButton']/span[@innertext='FEATURES']", "", 30000, null, "5014d696-8ec4-4891-917b-785fff4a16d8");
+                _solutionsInfo = new RepoItemInfo(this, "SOLUTIONS", ".//li[#'solutionMenuButton']/span[@innertext='SOLUTIONS']", "", 30000, null, "b75b56c1-9855-4325-a177-9759f83253f1");
+                _pricingInfo = new RepoItemInfo(this, "PRICING", ".//div[#'rx-header-sticky-content-wrapper']//ul/li[3]/a[@innertext='PRICING']", "", 30000, null, "88ec3cd3-e84d-49fd-ae08-381f8be8bb75");
+                _resourcesInfo = new RepoItemInfo(this, "RESOURCES", ".//div[#'rx-header-sticky-content-wrapper']//ul/li[4]/a[@innertext='RESOURCES']", "", 30000, null, "404e07e8-10b9-4692-ba9b-38175b6c4b37");
             }
 
             /// <summary>
@@ -115,6 +123,102 @@ namespace MyTest1
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The FEATURES item.
+            /// </summary>
+            [RepositoryItem("5014d696-8ec4-4891-917b-785fff4a16d8")]
+            public virtual Ranorex.SpanTag FEATURES
+            {
+                get
+                {
+                    return _featuresInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The FEATURES item info.
+            /// </summary>
+            [RepositoryItemInfo("5014d696-8ec4-4891-917b-785fff4a16d8")]
+            public virtual RepoItemInfo FEATURESInfo
+            {
+                get
+                {
+                    return _featuresInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SOLUTIONS item.
+            /// </summary>
+            [RepositoryItem("b75b56c1-9855-4325-a177-9759f83253f1")]
+            public virtual Ranorex.SpanTag SOLUTIONS
+            {
+                get
+                {
+                    return _solutionsInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SOLUTIONS item info.
+            /// </summary>
+            [RepositoryItemInfo("b75b56c1-9855-4325-a177-9759f83253f1")]
+            public virtual RepoItemInfo SOLUTIONSInfo
+            {
+                get
+                {
+                    return _solutionsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PRICING item.
+            /// </summary>
+            [RepositoryItem("88ec3cd3-e84d-49fd-ae08-381f8be8bb75")]
+            public virtual Ranorex.ATag PRICING
+            {
+                get
+                {
+                    return _pricingInfo.CreateAdapter<Ranorex.ATag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PRICING item info.
+            /// </summary>
+            [RepositoryItemInfo("88ec3cd3-e84d-49fd-ae08-381f8be8bb75")]
+            public virtual RepoItemInfo PRICINGInfo
+            {
+                get
+                {
+                    return _pricingInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RESOURCES item.
+            /// </summary>
+            [RepositoryItem("404e07e8-10b9-4692-ba9b-38175b6c4b37")]
+            public virtual Ranorex.ATag RESOURCES
+            {
+                get
+                {
+                    return _resourcesInfo.CreateAdapter<Ranorex.ATag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RESOURCES item info.
+            /// </summary>
+            [RepositoryItemInfo("404e07e8-10b9-4692-ba9b-38175b6c4b37")]
+            public virtual RepoItemInfo RESOURCESInfo
+            {
+                get
+                {
+                    return _resourcesInfo;
                 }
             }
         }

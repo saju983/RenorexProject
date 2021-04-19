@@ -1,30 +1,74 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<repository
-name="MyTest1Repository"
-id="43e497de-fc4a-4438-a202-625d1321dca6">
-  <codegen
-  classname="MyTest1Repository"
-  namespace="MyTest1"/>
-  <rootfolder
-  name="Root"
-  id="3dfa61cb-f1c2-449d-83e1-284b1fbd9842"
-  searchtimeout="30000ms"
-  capname="unknown"
-  isrooted="True"
-  usecache="True">
-      <appfolder
-          addcaps="container,webdocument"
-          capname="webdocument"
-          id="8aefcf23-5d42-4100-abda-e414f868c905"
-          isrooted="True"
-          name="ApplicationUnderTest"
-          searchtimeout="30000ms"
-          usecache="False">
-          <basepath>
-              /dom[@domain='www.ranorex.com']
-          </basepath>
-          <icon>
-iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+﻿<repository
+id="43e497de-fc4a-4438-a202-625d1321dca6"
+name="MyTest1Repository">
+	<codegen
+	classname="MyTest1Repository"
+	namespace="MyTest1">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="3dfa61cb-f1c2-449d-83e1-284b1fbd9842"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		addcaps="container,webdocument"
+		capname="webdocument"
+		id="8aefcf23-5d42-4100-abda-e414f868c905"
+		isrooted="True"
+		name="ApplicationUnderTest"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="5014d696-8ec4-4891-917b-785fff4a16d8"
+			name="FEATURES"
+			refimgid="47900899-cb62-4bf3-b735-7b04ee8eb443"
+			refpath="/dom[@domain='www.ranorex.com']//li[#'productMenuButton']/span[@innertext='FEATURES']"
+			robustPath=""
+			searchtimeout="30000ms">
+				/dom[@domain='www.ranorex.com']//li[#'productMenuButton']/span[@innertext='FEATURES']
+			</item>
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="b75b56c1-9855-4325-a177-9759f83253f1"
+			name="SOLUTIONS"
+			refimgid="86cbf86f-01f6-4c72-b492-46b00e8c3ddc"
+			refpath="/dom[@domain='www.ranorex.com']//li[#'solutionMenuButton']/span[@innertext='SOLUTIONS']"
+			robustPath=""
+			searchtimeout="30000ms">
+				/dom[@domain='www.ranorex.com']//li[#'solutionMenuButton']/span[@innertext='SOLUTIONS']
+			</item>
+			<item
+			addcaps="unknown,webelement,atag"
+			capname="atag"
+			id="88ec3cd3-e84d-49fd-ae08-381f8be8bb75"
+			name="PRICING"
+			refimgid="0cd66596-d10b-4e01-b5a9-be18bc2504c8"
+			refpath="/dom[@domain='www.ranorex.com']//li[#'webinarLink']/a[@innertext='PRICING']"
+			robustPath=""
+			searchtimeout="30000ms">
+				/dom[@domain='www.ranorex.com']//div[#'rx-header-sticky-content-wrapper']//ul/li[3]/a[@innertext='PRICING']
+			</item>
+			<item
+			addcaps="unknown,webelement,atag"
+			capname="atag"
+			id="404e07e8-10b9-4692-ba9b-38175b6c4b37"
+			name="RESOURCES"
+			refimgid="6a078435-baa4-48ff-a219-71d5fa4c041b"
+			refpath="/dom[@domain='www.ranorex.com']//div[#'rx-header-sticky-content-wrapper']/div[2]/div/ul/li[4]/a[@innertext='RESOURCES']"
+			robustPath=""
+			searchtimeout="30000ms">
+				/dom[@domain='www.ranorex.com']//div[#'rx-header-sticky-content-wrapper']//ul/li[4]/a[@innertext='RESOURCES']
+			</item>
+			<basepath>
+				/dom[@domain='www.ranorex.com']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGHRFWHRTb2Z0d2FyZQBQYWlu
 dC5ORVQgdjMuMzE3g3eGAAACKklEQVQ4T43R20vTcRjHcS/6G4Kgyy6KKKjwJogIDBJjIBUt2YVD
 yoGVmWUWzozMC92YaWqeSE1s0dThOtjBWUlKkMxDudXU1lCU6XSepzu82+/nvNrX6APP1e95Xt/f
@@ -37,9 +81,11 @@ lc7EIcse4vXJJF18xX7FVUpq6njd5xUDKVeKcE2v4xib52bxIAdza9mbf4CE9OscUZo5q3nO295p
 zD0zYuBcegHOCb+8KpvDi6G5hRMX8klIKaei6b083PdjCdNHjxhQqO/gcPsj77CB27PO2OQa9j+r
 8tq+/VyODC/yaXBxeyBRlUPv8Dzt3eO86PrNs85Rml7+ot7soLrVTqVpsypMTjGQcD5L/vC/tTkV
 F/cXNG0rDkAnVtkAAAAASUVORK5CYII=
-          </icon>
-      </appfolder>
-      <basepath/>
-  </rootfolder>
-  <variables/>
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
 </repository>
